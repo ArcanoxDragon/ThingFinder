@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32602.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThingFinder", "ThingFinder\ThingFinder.csproj", "{8984A900-8752-4D42-B611-59F8E717DB34}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External", "External", "{4E78BF3B-568D-4BA4-B225-E4B73AF39162}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arcanox.Web.Core", "..\AspNetCoreHelpers\src\Arcanox.Web.Core\Arcanox.Web.Core.csproj", "{D86C0543-6ECC-48BB-8BE9-66023FD5FB13}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arcanox.Web.Bootstrap", "..\AspNetCoreHelpers\src\Arcanox.Web.Bootstrap\Arcanox.Web.Bootstrap.csproj", "{5302530C-277A-4BE1-80B2-7FF410D5E21D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8984A900-8752-4D42-B611-59F8E717DB34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8984A900-8752-4D42-B611-59F8E717DB34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8984A900-8752-4D42-B611-59F8E717DB34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8984A900-8752-4D42-B611-59F8E717DB34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D86C0543-6ECC-48BB-8BE9-66023FD5FB13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D86C0543-6ECC-48BB-8BE9-66023FD5FB13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D86C0543-6ECC-48BB-8BE9-66023FD5FB13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D86C0543-6ECC-48BB-8BE9-66023FD5FB13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5302530C-277A-4BE1-80B2-7FF410D5E21D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5302530C-277A-4BE1-80B2-7FF410D5E21D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5302530C-277A-4BE1-80B2-7FF410D5E21D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5302530C-277A-4BE1-80B2-7FF410D5E21D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D86C0543-6ECC-48BB-8BE9-66023FD5FB13} = {4E78BF3B-568D-4BA4-B225-E4B73AF39162}
+		{5302530C-277A-4BE1-80B2-7FF410D5E21D} = {4E78BF3B-568D-4BA4-B225-E4B73AF39162}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2600A64C-D60B-4E70-A2F8-C5664FF36095}
+	EndGlobalSection
+EndGlobal

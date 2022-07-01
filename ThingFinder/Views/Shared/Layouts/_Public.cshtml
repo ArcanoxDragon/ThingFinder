@@ -1,0 +1,25 @@
+﻿@using ThingFinder.Utility
+
+@{
+    Layout = "Layouts/_Root";
+}
+
+<header>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand mx-auto">ThingFinder</a>
+        </div>
+    </nav>
+</header>
+
+<div class="container">
+    <main role="main">
+        @RenderBody()
+    </main>
+</div>
+
+<footer class="footer text-muted">
+    <div class="container">
+        &copy; @Constants.CopyrightDate - @Constants.CopyrightAuthor
+    </div>
+</footer>
