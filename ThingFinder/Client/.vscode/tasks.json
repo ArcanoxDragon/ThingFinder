@@ -4,7 +4,19 @@
 		{
 			"type": "npm",
 			"script": "install",
-			"label": "Yarn Install"
+			"label": "Yarn Install",
+			"icon": {
+				"id": "package",
+				"color": "terminal.ansiYellow"
+			},
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "dedicated",
+				"showReuseMessage": false,
+				"clear": true
+			}
 		},
 		{
 			"type": "npm",
@@ -19,7 +31,11 @@
 			"problemMatcher": [
 				"$tsc"
 			],
-			"label": "Build"
+			"label": "Build",
+			"icon": {
+				"id": "tools",
+				"color": "terminal.ansiGreen"
+			}
 		},
 		{
 			"type": "npm",
@@ -41,7 +57,11 @@
 				}
 			],
 			"isBackground": true,
-			"label": "Build (Watch)"
+			"label": "Build (Watch)",
+			"icon": {
+				"id": "watch",
+				"color": "terminal.ansiBlue"
+			}
 		}
 	]
 }
