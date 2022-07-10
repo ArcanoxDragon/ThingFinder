@@ -13,10 +13,16 @@
         @Constants.SiteName
     </title>
 
+    <link rel="stylesheet" href="~/css/themes/default-dark.css" asp-append-version="true"/> @* TODO: Theme selection *@
+
     @await RenderSectionAsync("Styles", required: false)
 </head>
 <body>
     @RenderBody()
+
+    <script src="~/js/webpack.runtime.js" asp-append-version="true"></script>
+    <script src="~/js/vendor.js" asp-append-version="true"></script>
+    <script src="~/js/index.js" asp-append-version="true"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>

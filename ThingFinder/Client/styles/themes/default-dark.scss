@@ -1,0 +1,12 @@
+@import "~bootstrap/scss/functions";
+
+// Variable overrides
+$body-bg:		#212529; // gray-900
+$body-color:	#fff;
+
+$text-muted:	tint-color(#6c757d, 20%); // gray-600 as base
+
+$link-color:    tint-color(#0d6efd, 20%); // primary (i.e. blue) as base
+
+// Bootstrap itself
+@import "~bootstrap/scss/bootstrap";

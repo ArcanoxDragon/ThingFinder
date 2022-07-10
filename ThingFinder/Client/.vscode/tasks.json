@@ -1,0 +1,47 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "install",
+			"label": "Yarn Install"
+		},
+		{
+			"type": "npm",
+			"script": "build",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"dependsOn": [
+				"Yarn Install"
+			],
+			"problemMatcher": [
+				"$tsc"
+			],
+			"label": "Build"
+		},
+		{
+			"type": "npm",
+			"script": "watch",
+			"group": {
+				"kind": "build"
+			},
+			"dependsOn": [
+				"Yarn Install"
+			],
+			"problemMatcher": [
+				{
+					"base": "$tsc",
+					"background": {
+						"activeOnStart": true,
+						"beginsPattern": "^=== Compilation Started ===$",
+						"endsPattern": "^=== Compilation Finished ===$",
+					}
+				}
+			],
+			"isBackground": true,
+			"label": "Build (Watch)"
+		}
+	]
+}
