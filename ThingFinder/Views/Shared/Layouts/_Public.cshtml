@@ -4,6 +4,14 @@
     Layout = "Layouts/_Root";
 }
 
+@section Styles {
+    @await RenderSectionAsync("Styles", false)
+}
+
+@section Scripts {
+    @await RenderSectionAsync("Scripts", false)
+}
+
 <header>
     <nav class="navbar navbar-expand-sm navbar-toggleable-sm">
         <div class="container-fluid">
