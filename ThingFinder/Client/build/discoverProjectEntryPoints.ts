@@ -4,14 +4,14 @@ import { globby } from "globby";
 import { EntryObject } from "webpack";
 import { ScriptsDir, StylesDir } from "./constants.js";
 
-export async function discoverEntries(): Promise<EntryObject> {
-    const scriptEntries = await discoverScriptEntries();
-    const styleEntries = await discoverStyleEntries();
+export async function discoverProjectEntryPoints(): Promise<EntryObject> {
+    const scriptEntries = await discoverScriptEntryPoints();
+    const styleEntries = await discoverStyleEntryPoints();
 
     return { ...scriptEntries, ...styleEntries };
 }
 
-async function discoverScriptEntries(): Promise<EntryObject> {
+async function discoverScriptEntryPoints(): Promise<EntryObject> {
     const scriptFiles = await globby("**/*.ts", { cwd: ScriptsDir });
     const entries: EntryObject = {};
 
@@ -27,7 +27,7 @@ async function discoverScriptEntries(): Promise<EntryObject> {
     return entries;
 }
 
-async function discoverStyleEntries(): Promise<EntryObject> {
+async function discoverStyleEntryPoints(): Promise<EntryObject> {
     const styleFiles = await globby([
         "**/*.scss",
         "!**/_*.scss",
@@ -35,14 +35,7 @@ async function discoverStyleEntries(): Promise<EntryObject> {
 
     return {
         styles: {
-            import: styleFiles.map(file => {
-                const dir = path.dirname(file);
-                const base = path.basename(file, ".scss");
-                // const entryName = `${dir}/${base}`;
-                const entryPath = `./styles/${file}`;
-
-                return entryPath;
-            }),
+            import: styleFiles.map(file => `./styles/${file}`),
         },
     };
 }

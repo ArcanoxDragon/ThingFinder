@@ -1,12 +1,13 @@
-import webpack from "webpack";
+import webpack, { Chunk, Module } from "webpack";
 
 import { Configuration, PathData } from "webpack";
 import { OutputDir, ProjectPath } from "./build/constants.js";
-import { discoverEntries } from "./build/discoverEntries.js";
+import { getEntryPoints } from "./build/getEntryPoints.js";
+import { LibraryEntryPoints } from "./build/LibraryEntryPoints.js";
 import { CompilationStatusPlugin } from "./build/plugins/CompilationStatusPlugin.js";
 
 export const baseConfig: Configuration = {
-    entry: discoverEntries,
+    entry: getEntryPoints,
     context: ProjectPath("."),
 
     output: {
@@ -26,18 +27,13 @@ export const baseConfig: Configuration = {
                 defaultVendors: {
                     test: /[\\/]node_modules[\\/]/,
                     name: "vendor",
-                    chunks: "all",
+                    chunks: chunk => !(chunk.name in LibraryEntryPoints),
                 },
             },
         },
     },
 
     plugins: [
-        new webpack.ProvidePlugin({
-            $: "jquery",
-            jQuery: "jquery",
-        }),
-
         new CompilationStatusPlugin(),
     ],
 
