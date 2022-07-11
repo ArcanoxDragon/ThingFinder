@@ -1,6 +1,6 @@
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using ThingFinder.Data;
+using ThingFinder.Models.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,7 +14,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(options => {
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services
-	   .AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+	   .AddDefaultIdentity<User>(options => options.SignIn.RequireConfirmedAccount = true)
+	   .AddRoles<Role>()
 	   .AddEntityFrameworkStores<ApplicationDbContext>();
 
 var mvc = builder.Services.AddControllersWithViews();

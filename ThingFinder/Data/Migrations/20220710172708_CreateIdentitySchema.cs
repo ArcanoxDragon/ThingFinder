@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace ThingFinder.Data.Migrations
+namespace Data.Migrations
 {
     public partial class CreateIdentitySchema : Migration
     {
