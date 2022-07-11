@@ -1,2 +1,1 @@
-// Import 3rd-party libraries
-import "bootstrap";
+console.log("Hello World!");
