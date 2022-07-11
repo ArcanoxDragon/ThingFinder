@@ -1,5 +1,3 @@
-import webpack, { Chunk, Module } from "webpack";
-
 import { Configuration, PathData } from "webpack";
 import { OutputDir, ProjectPath } from "./build/constants.js";
 import { getEntryPoints } from "./build/getEntryPoints.js";
