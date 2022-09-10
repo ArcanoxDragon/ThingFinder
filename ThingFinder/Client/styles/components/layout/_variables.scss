@@ -1,9 +1,9 @@
-$header-tint-amount:    10% !default;
-$header-bg:             shift-color($body-bg, $header-tint-amount) !default;
+$header-tint-amount:	10% !default;
+$header-bg:				shift-color($body-bg, $header-tint-amount) !default;
 
-$footer-tint-amount:    10% !default;
-$footer-bg:             shift-color($body-bg, $footer-tint-amount) !default;
-$footer-padding-y:      0.75em !default;
+$footer-tint-amount:	10% !default;
+$footer-bg:				shift-color($body-bg, $footer-tint-amount) !default;
+$footer-padding-y:		0.75em !default;
 
-$main-padding-x:       0 !default;
-$main-padding-y:       0.5em !default;
+$main-padding-x:		0 !default;
+$main-padding-y:		0.5em !default;

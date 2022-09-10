@@ -1,54 +1,54 @@
 html,
 body {
-    min-height: 100vh;
-    min-height: 100lvh; // Currently only for Firefox
+	min-height: 100vh;
+	min-height: 100lvh; // Currently only for Firefox
 }
 
 body {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 header,
 footer {
-    z-index: 10;
+	z-index: 10;
 }
 
 header {
-    background-color: $header-bg;
+	background-color: $header-bg;
 }
 
 footer {
-    background-color: $footer-bg;
-    padding-top: $footer-padding-y;
-    padding-bottom: $footer-padding-y;
+	background-color: $footer-bg;
+	padding-top: $footer-padding-y;
+	padding-bottom: $footer-padding-y;
 }
 
 #main-container {
-    flex-grow: 1;
-    min-height: 0;
-    padding-top: $main-padding-y;
-    padding-left: $main-padding-x;
-    padding-bottom: $main-padding-y;
-    padding-right: $main-padding-x;
+	flex-grow: 1;
+	min-height: 0;
+	padding-top: $main-padding-y;
+	padding-left: $main-padding-x;
+	padding-bottom: $main-padding-y;
+	padding-right: $main-padding-x;
 
-    main {
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
-    }
+	main {
+		display: flex;
+		flex-direction: column;
+		overflow: hidden;
+	}
 }
 
 @include media-breakpoint-up(sm) {
-    // Header and footer become sticky on "desktop"-sized displays
+	// Header and footer become sticky on "desktop"-sized displays
 
-    header {
-        position: sticky;
-        top: 0;
-    }
+	header {
+		position: sticky;
+		top: 0;
+	}
 
-    footer {
-        position: sticky;
-        bottom: 0;
-    }
+	footer {
+		position: sticky;
+		bottom: 0;
+	}
 }

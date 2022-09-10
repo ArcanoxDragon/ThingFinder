@@ -1,7 +1,7 @@
 export interface Environment {
-    prod: boolean;
+	prod: boolean;
 }
 
 export const DefaultEnvironment: Environment = {
-    prod: false,
+	prod: false,
 };
