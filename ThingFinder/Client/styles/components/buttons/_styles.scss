@@ -1,0 +1,4 @@
+.btn.btn-link {
+    // The default transparent border on buttons makes .btn-link elements not line up vertically when next to an actual link in some cases, e.g. a navbar
+    border-width: 0;
+}
